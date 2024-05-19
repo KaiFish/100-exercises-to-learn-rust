@@ -1,3 +1,5 @@
+use core::net;
+
 // Define a function named `factorial` that, given a non-negative integer `n`,
 // returns `n!`, the factorial of `n`.
 //
@@ -9,6 +11,14 @@
 // `factorial(2)` to return `2`, and so on.
 //
 // Use only what you learned! No loops yet, so you'll have to use recursion!
+fn factorial(n: u32) -> u32{
+    if n == 0{
+        return 1;
+    }
+    let f = n * factorial(n-1);
+    f
+}
+
 
 #[cfg(test)]
 mod tests {
